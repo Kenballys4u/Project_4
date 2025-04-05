@@ -55,7 +55,7 @@ df = df.rename(columns={"price": "Price", "model_year": "Model Year", "model": "
 st.header("How Each Attribute Affects a Car's Selling Price")
 
 # Create toggle that allows user to hide or show the scatter plot. Default toggle to true
-plot_one = st.checkbox('Toggle off to Hide Scatter Plot')
+plot_one = st.checkbox('Toggle off to Hide Scatter Plot', value= True)
 
 
 # If the toggle is set to true than show the scatter plot
@@ -86,7 +86,7 @@ if plot_one:
 
 
     # Create toggle that allows user to hide or show the histogram. Default toggle to true
-plot_two = st.checkbox('Toggle off to Hide Histogram')
+plot_two = st.checkbox('Toggle off to Hide Histogram', value= True)
 
 # If the toggle is set to true than show the histogram
 if plot_two:
