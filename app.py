@@ -55,7 +55,7 @@ df = df.rename(columns={"price": "Price", "model_year": "Model Year", "model": "
 st.header("How Each Attribute Affects a Car's Selling Price")
 
 # Create toggle that allows user to hide or show the scatter plot. Default toggle to true
-plot_one = st.toggle('Toggle off to Hide Scatter Plot', value=True)
+plot_one = st.checkbox('Toggle off to Hide Scatter Plot')
 
 
 # If the toggle is set to true than show the scatter plot
@@ -75,7 +75,7 @@ if plot_one:
         0, 2020, (0, 2020))
 
     # Create a vehicles data frame that filters with model year slider
-    df_filtered = vehicles[vehicles["Model Year"].between(values[0], values[1])]
+    df_filtered = df[df["Model Year"].between(values[0], values[1])]
 
     # Configure parameters of Scatter Plot
     fig_one = px.scatter(df_filtered, x=genre, y="Price", color = "Condition", symbol="Condition", hover_data=['Model'], title= "Scatter plot of " + genre + " vs. Price")
@@ -86,7 +86,7 @@ if plot_one:
 
 
     # Create toggle that allows user to hide or show the histogram. Default toggle to true
-plot_two = st.toggle('Toggle off to Hide Histogram', value=True)
+plot_two = st.checkbox('Toggle off to Hide Histogram')
 
 # If the toggle is set to true than show the histogram
 if plot_two:
