@@ -7,7 +7,7 @@ import plotly.express as px
 
 # Provide info about project
 st.title('TripleTen: Project Four')
-st.subheader('Car Advertisement Analysis By Brandon Levan')
+st.subheader('Car Advertisement Analysis By Kenneth Yamoah')
 st.write("Using a car advertisement data set, I've created two plots below that visual how certain attributes impact used car sales.")
 
 
